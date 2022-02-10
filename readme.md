@@ -1,14 +1,45 @@
-Diverse and detailed ML benchmark on tabular data for reproducible research
+This project aims to develop a diverse and detailed ML benchmark on tabular data for reproducible research.
 
-Contributions:
+Usage:
+
+```
+!pip install ml-holmes
+
+from holmes import datasets
+
+print(datasets.list_names())
+higgs = datasets.get('higgs',
+		size=2**16, val_size=2**16,
+		numpy=True, #this is by default; or df=True
+		preproc='robust', #same as RobustScaler
+		preproc_cat='one_hot',
+		preproc_target='standard') #same as StandardScaler
+
+# results:
+higgs.X_train or higgs.train[0]
+higgs.y_train or higgs.train[1]
+higgs.X_val or higgs.val[0]
+higgs.y_val or higgs.val[1]
+higgs.X_test or higgs.test[0]
+higgs.evaluate #function
+higgs.preproc
+higgs.preproc_target
+higgs.features #list of feature names and types
+higgs.target #target name and type
+higgs.n_features
+```
+
+------------------------
+
+Planned contributions:
 	1. Provide a diverse collection of datasets on tabular data
 	2. Provide a detailed description for each dataset
 	3. Provide a library for downloading these datasets
 	4. Provide an online evaluation system based on this collection
 	5. Provide a detailed information about each model predictions
-	6. Provide different types of features, missing features, outliers, and data shift
+	6. Provide realistic data with missing features, outliers, and data shift
 Purpose:
-	1. Compare a lot of existing methods
+	1. Compare and provide in-depth analysis for a lot of existing methods
 	2. Provide a reproducible code for a lot of existing methods
 	3. Facilitate development and evaluation of new methods
 
@@ -31,8 +62,7 @@ Dataset types:
 	Balanced and imbalanced, different metrics (MSE, MAPE, F1, ROC AUC, ...)
 	Small and large (optionally: make small by truncating large)
 	With and without outliers and missing features
-	With different type of features (quantitative, categorial, ordinal, sparse binary,
-			bag-of-words, TF-IDF, text/image embeddings)
+	With different type of features (quantitative, categorial, ordinal, sparse binary, bag-of-words, TF-IDF, text/image embeddings)
 	Diverse: economical, biological, synthetic, time series etc.
 
 Dataset examples:
@@ -46,7 +76,7 @@ Model(s) + dataset =
 	correlation between models
 	ensemble accuracies
 	accuracy dependencies: from iteration, number of train examples
-	cross validation score
+	cross validation score?
 	reproducible code
 	fine-tuning accuracy
 	measure bias and variance
