@@ -1,3 +1,19 @@
+Metadata-Version: 2.1
+Name: ml-holmes
+Version: 0.0.1
+Summary: A machine learning benchmark on tabular data
+Home-page: https://github.com/sedol1339/holmes
+Author: Oleg Sedukhin
+Author-email: sedol.mong@mail.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 This project aims to develop a diverse and detailed ML benchmark on tabular data for reproducible research.
 
 Installation: `!pip install ml-holmes`
@@ -69,3 +85,4 @@ Try:
 	- multitask tabular pretraining
 	- language models on numerical data
 	- generative FT-transformers
+

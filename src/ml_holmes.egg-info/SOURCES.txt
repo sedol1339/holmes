@@ -1,0 +1,9 @@
+LICENSE
+pyproject.toml
+setup.cfg
+src/holmes/__init__.py
+src/holmes/datasets.py
+src/ml_holmes.egg-info/PKG-INFO
+src/ml_holmes.egg-info/SOURCES.txt
+src/ml_holmes.egg-info/dependency_links.txt
+src/ml_holmes.egg-info/top_level.txt
